@@ -1,0 +1,23 @@
+create table orders(
+
+   order_no varchar2(20),
+   client_id varchar2(12),
+   amount number(19),
+   tran_date date,
+   CONSTRAINT order_pk PRIMARY KEY (order_no)
+  
+)    ;
+
+
+
+
+CREATE SEQUENCE orders_seq
+  MINVALUE 1
+  START WITH 1
+  INCREMENT BY 1
+  CACHE 20;
+  
+  
+  
+  select *
+from orders;
