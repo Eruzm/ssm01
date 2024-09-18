@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<meta charset="UTF-8">
+	<title>控制措施實際值輸入</title>
+	<link
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+		crossorigin="anonymous" />
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+	<script src="control-measure-checklist-unit-input/carousel.js"></script>
+	<script src="control-measure-checklist-unit-input/mouseWheel.js"></script>
+	<link rel="stylesheet"
+		href="control-measure-checklist-unit-input/App.css">
+	<script src="control-measure-checklist-unit-input/App.js"></script>
+</head>
+<body>
+	<div id="menus" class="">
+		<div class="accordion rounded shadow-sm" id="risk-item">
+			<div class="accordion-item">
+				<h2 class="accordion-header">
+					<button class="accordion-button" type="button"
+						data-bs-toggle="collapse" data-bs-target="#risk-group-1"
+						aria-expanded="true" aria-controls="risk-group-1">流動性風險</button>
+				</h2>
+				<div id="risk-group-1" class="accordion-collapse collapse show"
+					data-bs-parent="#risk-item">
+					<div class="accordion-body">
+						<button type="button" class="btn">作業風險</button>
+					</div>
+				</div>
+				<div id="risk-group-1" class="accordion-collapse collapse show"
+					data-bs-parent="#risk-item">
+					<div class="accordion-body">
+						<button type="button" class="btn">作業風險</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="right">
+		<div>
+			<fieldset class="border rounded-3 shadow-sm">
+            	<legend class="float-none w-auto ps-2 fs-5" >控制措施</legend>
+			<nav class="navbar navbar-expand-lg rounded-2" 
+				id="ctrl-measure-factor">
+				<div class="previous">
+					<i class="bi bi-caret-left-fill" style="width:10px;font-size: 1.5rem; color: #1A73E8;"></i>
+				</div>
+				<div class="wrapper" id="ctrl-measure-factor-body">
+					<ul class="navbar-nav nav-pills">
+						<li class="nav-item "><a class="nav-link"
+							aria-current="step" href="#">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Link</a>
+						</li>
+						<li class="nav-item"><a class="nav-link"
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item">
+					</ul>
+				</div>
+				<div class="next">
+					<i class="bi bi-caret-right-fill" style="width:10px;font-size: 1.5rem; color: #1A73E8;"></i>
+				</div>
+			</nav>
+			</fieldset>
+			
+			<fieldset class="border rounded-3 shadow-sm mt-2">
+            	<legend class="float-none w-auto ps-2 fs-5" >受查主體</legend>
+			<nav class="navbar navbar-expand-lg rounded-2"
+				id="audit-unit">
+				<div class="previous">
+					<i class="bi bi-caret-left-fill" style="width:10px;font-size: 1.5rem; color: #1A73E8;"></i>
+				</div>
+				<div class="wrapper" id="audit-unit-body" >
+					<ul class="navbar-nav nav-pills">
+						<li class="nav-item"><a class="nav-link"
+							aria-current="page" href="#">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Link</a>
+						</li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">資訊管理部</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">系統開發部</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">壽險部</a></li>
+						<li class="nav-item"><a class="nav-link"
+							aria-current="page" href="#">壽險發展部</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+						<li class="nav-item"><a class="nav-link "
+							aria-current="page" href="#">12345</a></li>
+				
+					</ul>
+				</div>
+				<div class="next">
+					<i class="bi bi-caret-right-fill" style="width:10px;font-size: 1.5rem; color: #1A73E8;"></i>
+				</div>
+			</nav>
+			</fieldset>			
+		</div>
+		
+	</div>
+</body>
+</html>
