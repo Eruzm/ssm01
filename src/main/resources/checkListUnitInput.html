@@ -148,6 +148,56 @@
 					<i class="bi bi-caret-right-fill" style="width:10px;font-size: 1.5rem; color: #1A73E8;"></i>
 				</div>
 			</nav>
+			</fieldset>
+			<fieldset class="border rounded-3 shadow-sm mt-2">
+				<legend class="float-none w-auto ps-2 fs-5" >實際值輸入</legend>
+				<form class="needs-validation">
+					<div class="container m-2 fs-6">
+						<div class="row">
+							<div class="col-auto d-flex flex-col mb-2">
+								 <label for="factorNo" class="col-sm-4 col-form-label">指標編號</label>
+							     <div class="col-sm-8">
+							     	<input type="text" readonly class="form-control-plaintext" id="factorNo" value="11260">
+							     </div>
+							</div>					
+						</div>
+						<div class="row">
+							<div class="col-auto d-flex flex-col">
+								  <label for="level" class="col-form-label">風險等級</label>
+								  <div class="ps-1">
+									  <select class="form-select" id="level">
+									      <option selected disabled value="">請選擇...</option>
+									      <option>高</option>
+									      <option>中</option>
+									      <option>低</option>
+									  </select>
+								  </div>
+							    <div class="invalid-feedback">
+							     	請輸入風險等級
+							    </div>							  
+							</div>
+							<div class="col-auto d-flex flex-col">
+								<label for="value" class="col-form-label">實際值</label>
+							     <div class="ps-1">
+							     	<input type="number" class="form-control" id="value" value="2">
+							     </div>
+							</div>
+							<div class="col-auto d-flex flex-col">
+								<label for="value" class=" col-form-label">監控報表</label>
+							     <div class="ps-1">
+							     	<input type="text" class="form-control" id="monitorReport" value="">
+							     </div>
+							</div>
+						</div>
+						<hr class="" style="margin:12px 0 5px 0;"/>
+						<div class="d-flex justify-content-center ">
+							<div class="p-2">
+								<button type="button" class="btn btn-primary">確認</button>
+								<button type="button" class="btn btn-danger">返回</button>
+							</div>
+						</div>
+					</div>
+				</form>
 			</fieldset>			
 		</div>
 		
