@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fg.workflow.dao.SignHistoryMapper">
+  <resultMap id="BaseResultMap" type="com.fg.workflow.model.po.SignHistory">
+    <result column="id" jdbcType="VARCHAR" property="id" />
+    <result column="work_flow_id" jdbcType="VARCHAR" property="workFlowId" />
+    <result column="work_item_id" jdbcType="VARCHAR" property="workItemId" />
+    <result column="seq" jdbcType="SMALLINT" property="seq" />
+    <result column="action" jdbcType="VARCHAR" property="action" />
+    <result column="detail" jdbcType="NVARCHAR" property="detail" typeHandler="com.fg.vendor.mybatis.typehandler.SignDetailTypeHandler" />
+    <result column="creater" jdbcType="VARCHAR" property="creater" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <insert id="insert" parameterType="com.fg.workflow.model.po.SignHistory">
+    insert into workflow.SignHistory (id, work_flow_id, work_item_id, 
+      seq, action, detail, 
+      creater, create_time)
+    values (#{id,jdbcType=VARCHAR}, #{workFlowId,jdbcType=VARCHAR}, #{workItemId,jdbcType=VARCHAR}, 
+      #{seq,jdbcType=SMALLINT}, #{action,jdbcType=VARCHAR}, #{detail,jdbcType=VARCHAR,typeHandler=com.fg.vendor.mybatis.typehandler.SignDetailTypeHandler}, 
+      #{creater,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.fg.workflow.model.po.SignHistory">
+    insert into SignHistory
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="workFlowId != null">
+        work_flow_id,
+      </if>
+      <if test="workItemId != null">
+        work_item_id,
+      </if>
+      <if test="seq != null">
+        seq,
+      </if>
+      <if test="action != null">
+        action,
+      </if>
+      <if test="detail != null">
+        detail,
+      </if>
+      <if test="creater != null">
+        creater,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="workFlowId != null">
+        #{workFlowId,jdbcType=VARCHAR},
+      </if>
+      <if test="workItemId != null">
+        #{workItemId,jdbcType=VARCHAR},
+      </if>
+      <if test="seq != null">
+        #{seq,jdbcType=SMALLINT},
+      </if>
+      <if test="action != null">
+        #{action,jdbcType=VARCHAR},
+      </if>
+      <if test="detail != null">
+        #{detail,jdbcType=NVARCHAR,typeHandler=com.fg.vendor.mybatis.typehandler.SignDetailTypeHandler},
+      </if>
+      <if test="creater != null">
+        #{creater,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  
+  <select id="findById" resultMap="BaseResultMap">
+  	SELECT *
+  	FROM workflow.SignHistory
+  </select>
+  
+</mapper>
